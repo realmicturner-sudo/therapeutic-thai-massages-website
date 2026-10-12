@@ -3,5 +3,12 @@
   "name": "therapeutic-thai-massages-website",
   "compatibility_date": "2026-10-06",
   // The live website is the plain pages in ./site. Nothing needs building.
-  "assets": { "directory": "./site" }
+  "assets": { "directory": "./site" },
+  // Serve the site on Jinny's domain. Cloudflare creates the DNS records and
+  // certificates on deploy. The old GoDaddy A records and the www CNAME must
+  // be deleted first; keep the "pay" CNAME (GoDaddy payments).
+  "routes": [
+    { "pattern": "therapeuticthaimassages.com", "custom_domain": true },
+    { "pattern": "www.therapeuticthaimassages.com", "custom_domain": true }
+  ]
 }
