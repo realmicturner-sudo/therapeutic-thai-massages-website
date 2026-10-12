@@ -4,6 +4,9 @@
   "compatibility_date": "2026-10-06",
   // The live website is the plain pages in ./site. Nothing needs building.
   "assets": { "directory": "./site" },
+  // Keep the workers.dev preview address working alongside her domain.
+  "workers_dev": true,
+  "preview_urls": true,
   // Serve the site on Jinny's domain. Cloudflare creates the DNS records and
   // certificates on deploy. The old GoDaddy A records and the www CNAME must
   // be deleted first; keep the "pay" CNAME (GoDaddy payments).
